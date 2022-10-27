@@ -23,9 +23,9 @@ jobs:
         env:
           LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
           LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}
-      - name: run Lighthouse CI google
+      - name: run Lighthouse CI Udemy
         run: |
-          lhci autorun --config=.lighthouserc.google.js
+          lhci autorun --config=.lighthouserc.udemy.js
         env:
           LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
           LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}
