@@ -20,7 +20,7 @@ module.exports = {
               '--settings.disableStorageReset'
             ], 
           },
-          numberOfRuns: 2
+          numberOfRuns: 1
       },
       upload: {
         target: "lhci",
