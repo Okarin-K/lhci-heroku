@@ -1,4 +1,3 @@
-require('dotenv').config();
 module.exports = async (browser, context) => {
   const page = await browser.newPage();
   await page.setExtraHTTPHeaders({ 'Accept-Language': 'ja-JP' });
