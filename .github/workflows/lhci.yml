@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
       - name: build
-        run: echo "ビルドなし"
+        run: echo ${LIGHTHOUSE_BUILD_TOKEN}
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.9.x
