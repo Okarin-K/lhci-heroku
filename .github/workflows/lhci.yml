@@ -16,7 +16,7 @@ jobs:
         run: echo "ビルドはありません。必要になったら追加してください"
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.9.x puppeteer@13.5.1 puppeteer-core@13.3.2
+          npm install -g @lhci/cli@0.9.x puppeteer@13.5.1 puppeteer-core@13.3.2 dotenv
           lhci autorun
         env:
           LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
