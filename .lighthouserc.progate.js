@@ -1,7 +1,7 @@
 module.exports = {
     ci: {
       collect: {
-        url: [`${process.env.PROGATE}/dashboard`, `${process.env.PROGATE}/courses`],
+        url: [`${process.env.PROGATE_URL}/dashboard`, `${process.env.PROGATE_URL}/courses`],
         puppeteerScript: `./progate/puppeteer.js`,
           puppeteerLaunchOptions: {
             defaultViewport: {
@@ -25,7 +25,7 @@ module.exports = {
             output: 'json',
             onlyCategories: ['performance'],
           },
-          numberOfRuns: 1
+          numberOfRuns: 2
       },
       upload: {
         target: "lhci",
