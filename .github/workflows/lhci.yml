@@ -17,18 +17,33 @@ jobs:
           npm install -g @lhci/cli@0.9.x puppeteer@13.5.1 puppeteer-core@13.3.2
       - name: build
         run: echo "ビルドはありません。必要になったら追加してください"
-      - name: run Lighthouse CI google
+      - name: run Lighthouse CI Google
         run: |
           lhci autorun --config=.lighthouserc.google.js
         env:
           LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
           LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}
+          LHCI_BUILD_CONTEXT__AUTHOR: ${{ secrets.LIGHTHOUSE_AUTORUN_BUILD_CONTEXT_AUTHOR }}
+          LHCI_BUILD_CONTEXT__AVATAR_URL: ${{ secrets.LIGHTHOUSE_AUTORUN_BUILD_CONTEXT_AVATAR_URL }}
       - name: run Lighthouse CI Udemy
         run: |
           lhci autorun --config=.lighthouserc.udemy.js
         env:
           LIGHTHOUSE_SERVER_UDEMY_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_SERVER_UDEMY_BUILD_TOKEN }}
           LIGHTHOUSE_SERVER_UDEMY_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_SERVER_UDEMY_ADMIN_TOKEN }}
+          LHCI_BUILD_CONTEXT__AUTHOR: ${{ secrets.LIGHTHOUSE_AUTORUN_BUILD_CONTEXT_AUTHOR }}
+          LHCI_BUILD_CONTEXT__AVATAR_URL: ${{ secrets.LIGHTHOUSE_AUTORUN_BUILD_CONTEXT_AVATAR_URL }}
           UDEMY_URL: ${{ secrets.UDEMY_URL }}
           UDEMY_USER_EMAIL: ${{ secrets.UDEMY_USER_EMAIL }}
           UDEMY_USER_PASSWORD: ${{ secrets.UDEMY_USER_PASSWORD }}
+      - name: run Lighthouse CI Progate
+        run: |
+          lhci autorun --config=.lighthouserc.progate.js
+        env:
+          LIGHTHOUSE_SERVER_PROGATE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_SERVER_PROGATE_BUILD_TOKEN }}
+          LIGHTHOUSE_SERVER_PROGATE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_SERVER_PROGATE_ADMIN_TOKEN }}
+          LHCI_BUILD_CONTEXT__AUTHOR: ${{ secrets.LIGHTHOUSE_AUTORUN_BUILD_CONTEXT_AUTHOR }}
+          LHCI_BUILD_CONTEXT__AVATAR_URL: ${{ secrets.LIGHTHOUSE_AUTORUN_BUILD_CONTEXT_AVATAR_URL }}
+          PROGATE_URL: ${{ secrets.PROGATE_URL }}
+          PROGATE_USER_EMAIL: ${{ secrets.PROGATE_USER_EMAIL }}
+          PROGATE_USER_PASSWORD: ${{ secrets.PROGATE_USER_PASSWORD }}
