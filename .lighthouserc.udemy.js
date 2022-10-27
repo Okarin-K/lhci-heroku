@@ -25,7 +25,7 @@ module.exports = {
             output: 'json',
             onlyCategories: ['performance'],
           },
-          numberOfRuns: 1
+          numberOfRuns: 2
       },
       upload: {
         target: "lhci",
