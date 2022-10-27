@@ -12,12 +12,20 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: build
-        run: echo "ビルドはありません。必要になったら追加してください"
-      - name: run Lighthouse CI
+      - name: package install
         run: |
           npm install -g @lhci/cli@0.9.x puppeteer@13.5.1 puppeteer-core@13.3.2
-          lhci autorun
+      - name: build
+        run: echo "ビルドはありません。必要になったら追加してください"
+      - name: run Lighthouse CI google
+        run: |
+          lhci autorun --config=.lighthouserc.google.js
+        env:
+          LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
+          LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}
+      - name: run Lighthouse CI google
+        run: |
+          lhci autorun --config=.lighthouserc.google.js
         env:
           LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
           LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}

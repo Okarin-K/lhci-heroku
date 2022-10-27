@@ -1,7 +1,7 @@
 module.exports = {
     ci: {
       collect: {
-        url: ['https://www.google.com/?hl=ja', `${process.env.UDEMY_URL}/courses/development/web-development/`],
+        url: [`${process.env.UDEMY_URL}/courses/development/web-development/`],
         puppeteerScript: `./udemy/puppeteer.js`,
           puppeteerLaunchOptions: {
             defaultViewport: {
