@@ -1,7 +1,7 @@
 name: "lhci-autorun"
 on:
   push:
-    main
+    - main
   schedule:
     # 毎日 09:00 (UTC) に処理を実行する。
     - cron: '0 0 * * *'
