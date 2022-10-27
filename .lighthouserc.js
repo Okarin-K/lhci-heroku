@@ -2,9 +2,7 @@ module.exports = {
     ci: {
       collect: {
         url: ['https://www.google.com/?hl=ja', `${process.env.UDEMY_URL}/courses/development/web-development/`],
-        collect: {
-          url,
-          puppeteerScript: `./udemy/puppeteer.js`,
+        puppeteerScript: `./udemy/puppeteer.js`,
           puppeteerLaunchOptions: {
             defaultViewport: {
               width: 1920,
@@ -23,7 +21,6 @@ module.exports = {
             ], 
           },
           numberOfRuns: 2
-        },
       },
       upload: {
         target: "lhci",
