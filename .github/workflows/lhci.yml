@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
       - name: build
-        run: echo ${LIGHTHOUSE_BUILD_TOKEN}
+        run: echo "ビルドはありません。必要になったら追加してください"
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.9.x
@@ -21,3 +21,7 @@ jobs:
         env:
           LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
           LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}
+          UDEMY_URL: ${{ secrets.UDEMY_URL }}
+          UDEMY_USER_EMAIL: ${{ secrets.UDEMY_USER_EMAIL }}
+          UDEMY_USER_PASSWORD: ${{ secrets.UDEMY_USER_PASSWORD }}
+          
