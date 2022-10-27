@@ -27,8 +27,8 @@ jobs:
         run: |
           lhci autorun --config=.lighthouserc.udemy.js
         env:
-          LIGHTHOUSE_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_BUILD_TOKEN }}
-          LIGHTHOUSE_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_ADMIN_TOKEN }}
+          LIGHTHOUSE_SERVER_UDEMY_BUILD_TOKEN: ${{ secrets.LIGHTHOUSE_SERVER_UDEMY_BUILD_TOKEN }}
+          LIGHTHOUSE_SERVER_UDEMY_ADMIN_TOKEN: ${{ secrets.LIGHTHOUSE_SERVER_UDEMY_ADMIN_TOKEN }}
           UDEMY_URL: ${{ secrets.UDEMY_URL }}
           UDEMY_USER_EMAIL: ${{ secrets.UDEMY_USER_EMAIL }}
           UDEMY_USER_PASSWORD: ${{ secrets.UDEMY_USER_PASSWORD }}

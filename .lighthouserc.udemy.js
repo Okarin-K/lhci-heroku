@@ -31,7 +31,7 @@ module.exports = {
         target: "lhci",
         serverBaseUrl: "https://shrouded-woodland-98361.herokuapp.com",
         ignoreDuplicateBuildFailure: true,
-        token: process.env.LIGHTHOUSE_BUILD_TOKEN
+        token: process.env.LIGHTHOUSE_SERVER_UDEMY_BUILD_TOKEN
       },
     },
   };
